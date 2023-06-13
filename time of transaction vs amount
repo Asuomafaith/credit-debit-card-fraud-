@@ -1,0 +1,10 @@
+# we willcheck Do fraudulent transaction occur more often during certain time frame? let us find with visual representation. 
+f,(ax1, ax2) = plt.subplots (2, 1, sharex = True)
+f.suptitle('Time of transaction vs Amount by class')
+ax1. scatter(fraud.Time,fraud.Amount)
+ax1.set_title('Fraud')
+ax2.scatter(normal.Time,normal.Amount)
+ax2.set_title('Normal')
+plt.xlabel('Time(in seconds)')
+plt.ylabel('Amount')
+plt.show()
