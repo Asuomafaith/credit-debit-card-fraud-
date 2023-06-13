@@ -1,0 +1,28 @@
+## Take some sample of the data 
+data1 = data.sample(frac = 0.1, random_state =1)
+data1. shape
+[output] (28481, 31)
+data.shape
+[output] (284807, 31)
+[input]
+# Determine the number of fraud and valid transactions in the data
+Fraud = data1 [data1['Class']==1]
+valid = data1 [data1['Class']==0]
+outlier_fraction = len(Fraud)/float(len (valid))
+[input]
+print (outlier_fraction)
+print ("Fraud cases:{}". format(len(Fraud)))
+print("valid cases:{}".format(len(valid)))
+
+0.0017234102419808666
+Fraud cases:49
+valid cases:28432
+[input]
+##correlation
+import seaborn as sns
+# get correlations of each features in dataset
+corrmat=data1.corr()
+top_corr_features = corrmat.index
+plt.figure(figsize = (26,26))
+# plot heat map
+g = sns.heatmap(data[top_corr_features].corr(),annot=True,cmap="RdYlGn")
